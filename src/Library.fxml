@@ -6,10 +6,14 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.geometry.Insets?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="923.0" style="-fx-background-color: #047a6f;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<AnchorPane fx:id="pnlChange" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="923.0" style="-fx-background-color: #047a6f;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
+
       <Label fx:id="label" layoutX="70.0" layoutY="30.0" text="Shoe Shop" textFill="WHITE">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="28.0" />
@@ -46,19 +50,34 @@
       <TextField fx:id="warnaSepatu" layoutX="125.0" layoutY="191.0" prefHeight="25.0" prefWidth="192.0" promptText="Warna" />
       <TextField fx:id="jumlah" layoutX="125.0" layoutY="246.0" prefHeight="25.0" prefWidth="192.0" promptText="Jumlah" />
       <TextField fx:id="hargaSepatu" layoutX="125.0" layoutY="297.0" prefHeight="25.0" prefWidth="192.0" promptText="Harga" />
+      <TextField fx:id="IdSepatu" layoutX="12.0" layoutY="358.0" prefHeight="25.0" prefWidth="60.0" promptText="Enter Id" />
       <Button fx:id="tambah" layoutX="257.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="38.0" prefWidth="59.0" text="Tambah">
          <font>
             <Font name="Berlin Sans FB" size="12.0" />
-         </font></Button>
-      <Button fx:id="butHapus" layoutX="196.0" layoutY="351.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="49.0" text="Hapus">
+         </font>
+         </Button>
+      <Button fx:id="butHapus" layoutX="196.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="38.0" prefWidth="49.0" text="Hapus">
          <font>
             <Font name="Berlin Sans FB" size="12.0" />
          </font></Button>
-      <Button fx:id="butPerbarui" layoutX="125.0" layoutY="351.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" text="Perbarui">
+      <Button fx:id="butPerbarui" layoutX="145.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="38.0" prefWidth="40.0" text="cek">
          <font>
             <Font name="Berlin Sans FB" size="12.0" />
          </font>
       </Button>
+      <Button fx:id="butEdit" layoutX="93.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="38.0" prefWidth="40.0" text="Edit">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button>
+
+
+      <!-- <Button fx:id="butPerbaruiData" layoutX="125.0" layoutY="151.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="60.0" text="Perbarui">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button> -->
+
       <TableView fx:id="tabelBuku" layoutX="337.0" layoutY="37.0" prefHeight="363.0" prefWidth="571.0">
         <columns>
             <TableColumn fx:id="tabelId" prefWidth="32.66668701171875" text="Id" />
@@ -69,5 +88,14 @@
             <TableColumn fx:id="tabelJumlah" minWidth="4.0" prefWidth="60.6666259765625" text="Harga" />
         </columns>
       </TableView>
+      <ScrollPane layoutX="337.0" layoutY="60.0" prefHeight="343.0" prefWidth="571.0">
+         <content>
+            <VBox fx:id="pnItemsBook" prefHeight="418" prefWidth="530.0" spacing="5.0" style="-fx-background-color: #fff;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

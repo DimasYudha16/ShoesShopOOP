@@ -9,6 +9,12 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+
+        //isi arraylist
+        ListSepatu.tambahSepatu("Sepatu Nike", "42", "Hitam", "Rp. 1.000.000", "10");
+        ListSepatu.tambahSepatu("Sepatu Adidas", "43", "Putih", "Rp. 1.500.000", "5");
+        ListSepatu.tambahSepatu("Sepatu Puma", "44", "Merah", "Rp. 2.000.000", "3");
+
         Parent root = FXMLLoader.load(getClass().getResource("Library.fxml"));
         
         Scene scene = new Scene(root);
