@@ -19,7 +19,7 @@ public class App extends Application {
         
         Scene scene = new Scene(root);
 
-        stage.setTitle("Library Inventory");
+        stage.setTitle("Shoes Inventory");
         stage.getIcons().add(new Image("Library Inv.png"));
         stage.setScene(scene);
         stage.show();
